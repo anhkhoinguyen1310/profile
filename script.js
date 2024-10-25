@@ -8,12 +8,7 @@ document.addEventListener('DOMContentLoaded', function () {
     let currentSection = 'home'; // Track the last active section
 
     window.addEventListener('scroll', () => {
-        document.addEventListener('scroll', function () {
-            const scrollTop = window.scrollY;
-            const docHeight = document.body.scrollHeight - window.innerHeight;
-            const scrollPercent = (scrollTop / docHeight) * 100;
-            document.querySelector('.scroll-progress').style.width = scrollPercent + '%';
-        });
+
 
         let contactReached = false;
 
@@ -35,7 +30,7 @@ document.addEventListener('DOMContentLoaded', function () {
         });
 
         // Check if the bottom of the page is reached and activate "Contact"
-        if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight) {
+        if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight - 500) {
             document.querySelector('.active').classList.remove('active');
             document.querySelector('a[href="#contact"]').classList.add('active');
         } else if (!contactReached) {
@@ -45,6 +40,12 @@ document.addEventListener('DOMContentLoaded', function () {
                 document.querySelector(`a[href="#${currentSection}"]`).classList.add('active');
             }
         }
+        document.addEventListener('scroll', function () {
+            const scrollTop = window.scrollY;
+            const docHeight = document.body.scrollHeight - window.innerHeight;
+            const scrollPercent = (scrollTop / docHeight) * 100;
+            document.querySelector('.scroll-progress').style.width = scrollPercent + '%';
+        });
     });
 });
 
