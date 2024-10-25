@@ -220,6 +220,8 @@ a {
     position: relative;
     width: fit-content;
     padding-right: 20px;
+    overflow: hidden;
+    white-space: nowrap;
 }
 
 .typing::after {
@@ -229,7 +231,7 @@ a {
     width: 100%;
     color: black;
     background: #ffff;
-    animation: typing 6s steps(34) infinite, caret 1s infinite;
+    animation: typing 5s steps(30) infinite, caret 1s infinite;
 }
 
 @-webkit-keyframes typing {
