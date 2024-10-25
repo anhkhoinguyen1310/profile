@@ -229,7 +229,7 @@ a {
     width: 100%;
     color: black;
     background: #ffff;
-    animation: typing 6s steps(44) infinite, caret 1s infinite;
+    animation: typing 6s steps(34) infinite, caret 1s infinite;
 }
 
 @-webkit-keyframes typing {
