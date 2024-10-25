@@ -8,6 +8,13 @@ document.addEventListener('DOMContentLoaded', function () {
     let currentSection = 'home'; // Track the last active section
 
     window.addEventListener('scroll', () => {
+        document.addEventListener('scroll', function () {
+            const scrollTop = window.scrollY;
+            const docHeight = document.body.scrollHeight - window.innerHeight;
+            const scrollPercent = (scrollTop / docHeight) * 100;
+            document.querySelector('.scroll-progress').style.width = scrollPercent + '%';
+        });
+
         let contactReached = false;
 
         sections.forEach(section => {

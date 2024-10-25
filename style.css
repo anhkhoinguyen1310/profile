@@ -18,14 +18,15 @@ a {
 }
 
 .scroll-progress {
+    scroll-behavior: smooth;
     position: fixed;
     height: 10px;
     top: 120px;
     left: 0;
-    width: 100%;
+    width: 0%;
     background-color: #ea4020;
-    animation: scroll-progress linear;
-    animation-timeline: scroll();
+    transition: width 0.1 ease-out;
+    z-index: 1000;
 }
 
 @keyframes scroll-progress {
