@@ -161,6 +161,15 @@ a {
 
 }
 
+.resume {
+    color: #ffff;
+}
+
+.resume-button:hover {
+    background-color: #cb7c6f;
+    color: #ffff;
+}
+
 .banner-top {
     padding: 50px;
     position: relative;
